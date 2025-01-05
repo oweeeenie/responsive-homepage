@@ -815,7 +815,6 @@ img {
 section.CONTACT-ME {
   display: flex;
   flex-direction: column;
-  /* Stack text and image vertically by default */
 }
 
 /* tablet view */
@@ -829,21 +828,15 @@ section.CONTACT-ME {
 
   section.CONTACT-ME {
     display: flex;
-    /* Ensure flexbox is applied */
     flex-direction: row;
-    /* Arrange items in a row */
     justify-content: space-between;
-    /* Space between image and text */
     align-items: center;
-    /* Vertically center the content */
     padding: 4rem 2rem;
   }
 
   section.CONTACT-ME .subtext-container {
     width: 75%;
   }
-
-  /* Icons layout adjustment */
 
   section.CONTACT-ME .space-x-6 {
     display: flex;
@@ -867,6 +860,91 @@ section.CONTACT-ME {
   .flexability {
     display: flex;
     flex-direction: row;
+  }
+}
+
+/* DESKTOP VIEW */
+
+@media (min-width: 1440px) {
+  section.ABOUT-ME {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 4rem 5rem;
+  }
+
+  section.ABOUT-ME .image-container {
+    width: 40%;
+  }
+
+  section.ABOUT-ME .text-container {
+    width: 55%;
+    font-size: 1.25rem;
+    line-height: 1.6;
+  }
+
+  section.ABOUT-ME img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
+  }
+}
+
+/* MY-WORK Section */
+
+@media (min-width: 1440px) {
+  section.MY-WORK {
+    padding: 4rem 5rem;
+  }
+
+  section.MY-WORK .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    /* 3 columns */
+    gap: 2rem;
+  }
+
+  section.MY-WORK .project-item {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  section.MY-WORK .project-item img {
+    width: 100%;
+    height: auto;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+}
+
+/* CONTACT-ME Section (Same as tablet view) */
+
+@media (min-width: 1440px) {
+  section.CONTACT-ME {
+    display: flex;
+    justify-content: space-between;
+    padding: 6rem 5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  section.CONTACT-ME .subtext-container {
+    width: 50%;
+  }
+
+  section.CONTACT-ME .image-container {
+    width: 40%;
+    margin-left: 2rem;
+  }
+
+  section.CONTACT-ME img {
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 10px;
   }
 }
 
