@@ -37,3 +37,54 @@ img {
   max-width: 100%;
   height: auto;
 }
+
+section.CONTACT-ME {
+  display: flex;
+  flex-direction: column; /* Stack text and image vertically by default */
+}
+
+/* tablet view */
+@media screen and (min-width: 768px) {
+  .MY-WORK > div {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  section.CONTACT-ME {
+    display: flex; /* Ensure flexbox is applied */
+    flex-direction: row; /* Arrange items in a row */
+    justify-content: space-between; /* Space between image and text */
+    align-items: center; /* Vertically center the content */
+    padding: 4rem 2rem;
+  }
+
+  section.CONTACT-ME .subtext-container {
+    width: 75%;
+  }
+
+  /* Icons layout adjustment */
+  section.CONTACT-ME .space-x-6 {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding-top: 3rem;
+  }
+
+  section.CONTACT-ME .image-container {
+    display: flex;
+  }
+
+  section.CONTACT-ME h2 {
+    font-size: 2.5rem;
+  }
+
+  section.CONTACT-ME p {
+    font-size: 1.4rem;
+  }
+
+  .flexability {
+    display: flex;
+    flex-direction: row;
+  }
+}
